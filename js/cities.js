@@ -1,6 +1,7 @@
-<?php
-
-$cities = array(
+/*
+ * List of Cities
+ */
+var cities = [
 	"New York, NY",
 	"Philadelphia, PA",
 	"Washington, DC",
@@ -30,4 +31,5 @@ $cities = array(
 	"Tokyo, JP",
 	"Sydney, AU",
 	"Easter Island, CL"
-);
+];
+
