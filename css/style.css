@@ -1,28 +1,158 @@
-@-o-viewport{width:device-width;}
-@-ms-viewport{width:device-width;}
-@viewport{width:device-width;}
-*{margin:0;padding:0;-webkit-text-size-adjust:100%;}
-*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
-body,html{margin:0;padding:0;height:100%;}
-body{position:relative;font-size:12pt;font-family:'Open Sans',sans-serif;background:#FAFAFA;color:#302E31;}
-.container{width:100%;margin:0 auto;position:relative;}
-.cf:before,.cf:after,.container:before,.container:after{content:"";display:table;}
-.cf:after,.container:after{clear:both;}
-.cf,.container{zoom:1;}
-.menu{font-size:23pt;cursor:pointer;}
-.menu.main{position:absolute;top:10px;right:10px;}
-.cities{position:fixed;top:0;width:100%;left:100%;bottom:0;background:#231f31;padding:20px;overflow-y:scroll;color:#fafafa;font-size:13pt;}
-.cities ul{list-style:none;}
-.cities li{margin-bottom:15px;cursor:pointer;}
-.cities li:hover{color:#911;}
-.data{text-align:center;font-size:23pt;padding-top:40px;}
-.conditions{font-size:14pt;text-transform:uppercase;margin-top:10px;font-weight:bold;}
-.conditions em{text-transform:none;display:block;font-weight:normal;}
-.press,.temp{display:none;margin-top:20px;font-size:44pt;text-transform:uppercase;}
-.temp{font-size:44pt;}
-.fa{cursor:pointer;}
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+}
 
-@media screen and (max-width: 767px){
-	.cities{text-align:right;}
-	.message{display:none;}
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    font-size: 12pt;
+    font-family: 'Lora', serif;
+    background: #FAFAFA;
+    color: #302E31;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.cf:before,
+.cf:after,
+.container:before,
+.container:after {
+    content: "";
+    display: table;
+}
+
+.cf:after,
+.container:after {
+    clear: both;
+}
+
+.cf,
+.container {
+    zoom: 1;
+}
+
+.menu {
+    font-size: 23pt;
+    cursor: pointer;
+}
+
+.menu.main {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+h1,
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32pt;
+}
+
+h2 {
+    font-size: 22pt;
+    margin: 0 0 20px;
+}
+
+.cities {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 100%;
+    bottom: 0;
+    background: #000;
+    overflow-y: scroll;
+    color: #fafafa;
+    font-size: 14pt;
+}
+
+.cities ul {
+    list-style: none;
+}
+
+.cities li {
+    cursor: pointer;
+    background: #3c3d4f;
+    padding: 20px 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.cities li:not(:last-child) {
+    border-bottom: 1px solid #000;
+}
+
+.cities li:hover {
+    color: #000;
+    background: #fff;
+}
+
+.data {
+    text-align: center;
+    font-size: 23pt;
+    padding-top: 40px;
+}
+
+.conditions {
+    font-size: 14pt;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.conditions em {
+    text-transform: none;
+    display: block;
+    font-weight: normal;
+}
+
+.press,
+.temp {
+    display: none;
+    margin-top: 20px;
+    font-size: 44pt;
+    text-transform: uppercase;
+}
+
+.fa {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 767px) {
+    .container {
+        border-left: 1px dotted #cecece;
+        border-right: 1px dotted #cecece;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cities {
+        text-align: right;
+    }
+    .message {
+        display: none;
+    }
 }
