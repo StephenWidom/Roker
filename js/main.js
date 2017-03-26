@@ -14,12 +14,29 @@ $(function(){
     // When a user clicks on the menu...
 	$('.menu').on("click", function(){
 
+        $('.options').animate({
+            right: 0
+        });
+
+	});
+
+
+    $('.ok').on("click", function() {
+
+        $('.options').animate({
+            right: '100%'
+        });
+
+    });
+
+    $('.play').on("click", function() {
+
         // Show list of cities
 		$('.cities').animate({
 			left: 0
 		});
 
-	});
+    });
 
 
     // When a user clicks a city...
@@ -32,15 +49,17 @@ $(function(){
 		var city = $(this).text();
 		$('.city').text(city);
 
+        var unit = $('input[name=unit]:checked').val();
+
         // Call to simpleWeather API to get weather conditions and temperature
 		$.simpleWeather({
 			location: city,
 			woeid: '',
-			unit: 'f',
+			unit: unit,
 			success: function(weather){
 				$('.country').text(weather.country);
 				$('.conditions').html('<em>Current conditions:</em>' + weather.currently);
-				$('.temp').text(weather.temp + '° F');
+				$('.temp').text(weather.temp + '° ' + unit.toUpperCase());
 			},
 			error: function(error){
 				$('.temp').text(error);

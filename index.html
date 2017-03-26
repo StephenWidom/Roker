@@ -11,18 +11,28 @@
 <body>
     <section>
         <div class="container">
-            <span class="menu main"><i class="fa fa-bars"></i></span>
+            <div class="buttons">
+                <span class="play"><i class="fa fa-play"></i></span>
+                <span class="menu"><i class="fa fa-bars"></i></span>
+            </div>
             <div class="cities">
                 <ul>
                 </ul>
             </div>
+            <div class="options">
+                <h3>Options</h3>
+                <label><input type="radio" name="unit" value="f" checked><span>Fahrenheit</span></label>
+                <label><input type="radio" name="unit" value="c"><span>Celsius</span></label>
+                <span class="ok"><i class="fa fa-check"></i></span>
+            </div>
             <div class="data">
                 <h1 class="city">Roker</h1>
                 <h2 class="country"></h2>
-                <p class="conditions">Press <span class="menu"><i class="fa fa-bars"></i></span> to begin</p>
+                <p class="conditions">Press <span class="play"><i class="fa fa-play"></i></span> to begin</p>
                 <p class="press"><i class="fa fa-eye"></i></p>
                 <p class="temp"></p>
             </div>
+            <div class="github">Peep the script on <a href="https://github.com/StephenWidom/roker" target="_blank">GitHub</a>.</div>
         </div>
     </section>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
